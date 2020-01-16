@@ -1,5 +1,5 @@
 /*
-Pure CSS navigation v1.0
+Pure CSS Navigation v1.1
 by Adam Culpepper | @adamculpepper
 https://github.com/adamculpepper/pure-css-navigation
 */
@@ -23,6 +23,13 @@ https://github.com/adamculpepper/pure-css-navigation
 .nav ul ul ul			{top:0; left:100%;}
 .nav ul ul ul			{margin-top:5px;}
 /* CORE STYLES - NO TOUCHY */
+
+/* ---------- */
+
+/* Justify Navigation (size all first level equally) */
+.nav.nav-justified > ul {width:100%;}
+.nav.nav-justified > ul > li {flex:1 1 auto;}
+.nav.nav-justified > ul > li > a {padding:0; text-align:center;}
 
 /* ---------- */
 
