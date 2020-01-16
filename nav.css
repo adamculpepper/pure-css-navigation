@@ -1,0 +1,38 @@
+/*
+Pure CSS navigation v1.0
+by Adam Culpepper | @adamculpepper
+https://github.com/adamculpepper/pure-css-navigation
+*/
+
+/* CORE STYLES - NO TOUCHY */
+.nav ul,
+.nav li					{margin:0; padding:0; list-style:none;}
+.nav a					{text-decoration:none; transition:all 300ms;}
+
+/* Level 1 */
+.nav ul					{display:flex; flex-wrap:wrap; z-index:1;}
+.nav ul li				{white-space:nowrap;}
+.nav ul > li			{position:relative;}
+.nav ul li a			{display:block;}
+
+/* Level 2 */
+.nav ul ul				{visibility:hidden; opacity:0; position:absolute; display:block; transition:all 300ms;}
+.nav ul li:hover > ul	{visibility:visible; opacity:1;}
+
+/* Level 3 */
+.nav ul ul ul			{top:0; left:100%;}
+.nav ul ul ul			{margin-top:5px;}
+/* CORE STYLES - NO TOUCHY */
+
+/* ---------- */
+
+/* Customizable styles */
+.nav ul li a:hover		{background:#ddd;}
+
+/* Level 1 */
+.nav ul li				{background:rgba(0, 0, 0, 0.05);}
+.nav ul li a			{font-size:1rem; line-height:50px; padding:0 20px;}
+
+/* Level 2 and beyond */
+.nav ul ul				{background:#d9d9d9;}
+.nav ul ul li a			{font-size:0.8rem; line-height:30px;}
