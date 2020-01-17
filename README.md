@@ -1,8 +1,12 @@
 # Pure CSS Navigation
 No dependency, CSS only navigation system
 
-# Features
+## Features
 * CSS only
 * No dependencies
+* Equal widths (justified) for the first level navs
 * Shows dropdown arrow if the parent nav has children
 * FontAwesome support
+
+## TODO
+* Vertical navigation support
