@@ -9,4 +9,4 @@ No dependency, CSS only navigation system
 * FontAwesome support
 
 ## TODO
-* Vertical navigation support
+* Finish vertical navigation support
