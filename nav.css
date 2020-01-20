@@ -1,8 +1,12 @@
 /*
-Pure CSS Navigation v1.1
+Pure CSS Navigation v1.2
 by Adam Culpepper | @adamculpepper
 https://github.com/adamculpepper/pure-css-navigation
 */
+
+/* //////////////////////////
+CUSTOMIZABLE STYLES AT BOTTOM
+////////////////////////// */
 
 /* CORE STYLES - NO TOUCHY */
 .nav ul,
@@ -10,13 +14,13 @@ https://github.com/adamculpepper/pure-css-navigation
 .nav a					{text-decoration:none; transition:all 300ms;}
 
 /* Level 1 */
-.nav ul					{display:flex; flex-wrap:wrap; z-index:1;}
+.nav ul					{display:flex; flex-wrap:wrap;}
 .nav ul li				{white-space:nowrap;}
 .nav ul > li			{position:relative;}
 .nav ul li a			{display:block;}
 
 /* Level 2 */
-.nav ul ul				{visibility:hidden; opacity:0; position:absolute; display:block; transition:all 300ms;}
+.nav ul ul				{visibility:hidden; opacity:0; position:absolute; z-index:1; display:block; transition:all 300ms;}
 .nav ul li:hover > ul	{visibility:visible; opacity:1;}
 
 /* Level 3 */
@@ -27,14 +31,53 @@ https://github.com/adamculpepper/pure-css-navigation
 /* ---------- */
 
 /* Justify Navigation (size all first level equally) */
-.nav.nav-justified > ul {width:100%;}
-.nav.nav-justified > ul > li {flex:1 1 auto;}
-.nav.nav-justified > ul > li > a {padding:0; text-align:center;}
+.nav.nav-justified > ul {display:table; width:100%;}
+.nav.nav-justified > ul > li {display:table-cell; width:1%;}
+.nav.nav-justified > ul > li > a {padding:0; display:block; text-align:center; position:relative;}
+.nav.nav-justified > ul > li > a:before,
+.nav.nav-justified > ul > li > a:after {background:red; position:absolute; height:auto; top:50%;}
+
+/* ---------- */
+
+/* Vertical Navigation */
+.nav.nav-vertical ul {display:block; width:200px;}
+.nav.nav-vertical > ul > li {}
+.nav.nav-vertical > ul > li > a {}
+
+/* ---------- */
+
+/* Arrow styles */
+.nav ul li a {display:flex;}
+.nav ul li a:first-child:nth-last-child(2):before,
+.nav ul li a:first-child:nth-last-child(2):after {content:''; align-self:center;}
+.nav ul li a:first-child:nth-last-child(2):before {width:10px; order:1;}
+.nav ul li a:first-child:nth-last-child(2):after {border:5px solid transparent; margin-left:auto!important; order:2;}
+
+.nav > ul > li > a:first-child:nth-last-child(2):after {}
+.nav > ul > li:hover > a:first-child:nth-last-child(2):after {border-color:transparent; margin-top:-5px;}
+.nav ul li li > a:first-child:nth-last-child(2):after {margin-top:-5px;}
+.nav ul li li:hover > a:first-child:nth-last-child(2):after {border-color:transparent; right:5px;}
+
+/* ---------- */
+
+/* FontAwesome Icon arrow support */
+.nav.nav-font-icons ul li a:first-child:nth-last-child(2):after {
+	content:'\f078'; /* arrow: down */
+	font-family:'FontAwesome';
+	margin:0;
+	border:0!important;
+}
+.nav.nav-font-icons > ul > li > a:first-child:nth-last-child(2):after {}
+.nav.nav-font-icons > ul > li:hover > a:first-child:nth-last-child(2):after {content:'\f077';}	/* arrow: up */
+.nav.nav-font-icons ul li li > a:first-child:nth-last-child(2):after {content:'\f054';}			/* arrow: right */
+.nav.nav-font-icons ul li li:hover > a:first-child:nth-last-child(2):after {content:'\f053';}	/* arrow: left */
 
 /* ---------- */
 
 /* Customizable styles */
-.nav ul li a:hover		{background:#ddd;}
+.nav ul li a			{color:#555;}
+
+.nav > ul > li			{margin-right:1px;}
 
 /* Level 1 */
 .nav ul li				{background:rgba(0, 0, 0, 0.05);}
@@ -42,4 +85,21 @@ https://github.com/adamculpepper/pure-css-navigation
 
 /* Level 2 and beyond */
 .nav ul ul				{background:#d9d9d9;}
-.nav ul ul li a			{font-size:0.8rem; line-height:30px;}
+.nav ul ul li a			{font-size:0.8rem; line-height:35px;}
+
+/* Hover colors */
+.nav ul li a:hover,
+.nav ul li li:hover > a:first-child:nth-last-child(2),
+.nav > ul > li:hover > a:first-child:nth-last-child(2) {background:#ddd;}
+
+/* Arrow colors*/
+.nav > ul > li > a:first-child:nth-last-child(2):after {border-top-color:rgba(0, 0, 0, 0.30);}
+.nav > ul > li:hover > a:first-child:nth-last-child(2):after {border-bottom-color:rgba(0, 0, 0, 0.60);}
+.nav ul li li > a:first-child:nth-last-child(2):after {border-left-color:rgba(0, 0, 0, 0.30);}
+.nav ul li li:hover > a:first-child:nth-last-child(2):after {border-right-color:rgba(0, 0, 0, 0.60);}
+
+/* FontAwesome arrow colors */
+.nav > ul > li > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.30);}
+.nav > ul > li:hover > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.60);}
+.nav ul li li > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.30);}
+.nav ul li li:hover > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.60);}
