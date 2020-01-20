@@ -1,5 +1,5 @@
 /*
-Pure CSS Navigation v1.2
+Pure CSS Navigation v1.3
 by Adam Culpepper | @adamculpepper
 https://github.com/adamculpepper/pure-css-navigation
 */
@@ -15,7 +15,7 @@ CUSTOMIZABLE STYLES AT BOTTOM
 
 /* Level 1 */
 .nav ul					{display:flex; flex-wrap:wrap;}
-.nav ul li				{white-space:nowrap;}
+.nav ul li				{white-space:nowrap; text-align:left;}
 .nav ul > li			{position:relative;}
 .nav ul li a			{display:block;}
 
@@ -30,12 +30,10 @@ CUSTOMIZABLE STYLES AT BOTTOM
 
 /* ---------- */
 
-/* Justify Navigation (size all first level equally) */
-.nav.nav-justified > ul {display:table; width:100%;}
-.nav.nav-justified > ul > li {display:table-cell; width:1%;}
-.nav.nav-justified > ul > li > a {padding:0; display:block; text-align:center; position:relative;}
-.nav.nav-justified > ul > li > a:before,
-.nav.nav-justified > ul > li > a:after {background:red; position:absolute; height:auto; top:50%;}
+/* Justify Navigation (first level equal widths) */
+.nav.nav-justified > ul {width:100%;}
+.nav.nav-justified > ul > li {flex: 1 1 auto;}
+.nav.nav-justified > ul > li > a {justify-content:center; padding:0;}
 
 /* ---------- */
 
@@ -47,16 +45,23 @@ CUSTOMIZABLE STYLES AT BOTTOM
 /* ---------- */
 
 /* Arrow styles */
-.nav ul li a {display:flex;}
-.nav ul li a:first-child:nth-last-child(2):before,
-.nav ul li a:first-child:nth-last-child(2):after {content:''; align-self:center;}
-.nav ul li a:first-child:nth-last-child(2):before {width:10px; order:1;}
-.nav ul li a:first-child:nth-last-child(2):after {border:5px solid transparent; margin-left:auto!important; order:2;}
-
-.nav > ul > li > a:first-child:nth-last-child(2):after {}
-.nav > ul > li:hover > a:first-child:nth-last-child(2):after {border-color:transparent; margin-top:-5px;}
-.nav ul li li > a:first-child:nth-last-child(2):after {margin-top:-5px;}
-.nav ul li li:hover > a:first-child:nth-last-child(2):after {border-color:transparent; right:5px;}
+.nav ul li a {display:flex; align-items:center;}
+.nav ul li a:first-child:nth-last-child(2):after {
+	content:'';
+	display:inline-block;
+	width:10px;
+	height:5px;
+	margin-left:10px;
+	opacity:0.50;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:10px 5px;
+	background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath opacity='.5' d='M1 1v1h1v1h1v1h1v1h2V4h1V3h1V2h1V1h1V0H0v1z'/%3E%3Cpath d='M2 1v1h1v1h1v1h2V3h1V2h1V1h1V0H1v1z'/%3E%3C/svg%3E");
+}
+.nav ul ul li a:first-child:nth-last-child(2):before,
+.nav ul ul li a:first-child:nth-last-child(2):after {content:'';}
+.nav ul ul li a:first-child:nth-last-child(2):before {order:1; margin-left:10px;}
+.nav ul ul li a:first-child:nth-last-child(2):after {order:2; margin-left:auto;}
 
 /* ---------- */
 
@@ -64,13 +69,12 @@ CUSTOMIZABLE STYLES AT BOTTOM
 .nav.nav-font-icons ul li a:first-child:nth-last-child(2):after {
 	content:'\f078'; /* arrow: down */
 	font-family:'FontAwesome';
-	margin:0;
-	border:0!important;
+	opacity:1;
+	width:auto;
+	height:auto;
+	background:none;
 }
-.nav.nav-font-icons > ul > li > a:first-child:nth-last-child(2):after {}
-.nav.nav-font-icons > ul > li:hover > a:first-child:nth-last-child(2):after {content:'\f077';}	/* arrow: up */
-.nav.nav-font-icons ul li li > a:first-child:nth-last-child(2):after {content:'\f054';}			/* arrow: right */
-.nav.nav-font-icons ul li li:hover > a:first-child:nth-last-child(2):after {content:'\f053';}	/* arrow: left */
+.nav.nav-font-icons ul ul li > a:first-child:nth-last-child(2):after {content:'\f054';} /* arrow: right */
 
 /* ---------- */
 
@@ -92,13 +96,7 @@ CUSTOMIZABLE STYLES AT BOTTOM
 .nav ul li li:hover > a:first-child:nth-last-child(2),
 .nav > ul > li:hover > a:first-child:nth-last-child(2) {background:#ddd;}
 
-/* Arrow colors*/
-.nav > ul > li > a:first-child:nth-last-child(2):after {border-top-color:rgba(0, 0, 0, 0.30);}
-.nav > ul > li:hover > a:first-child:nth-last-child(2):after {border-bottom-color:rgba(0, 0, 0, 0.60);}
-.nav ul li li > a:first-child:nth-last-child(2):after {border-left-color:rgba(0, 0, 0, 0.30);}
-.nav ul li li:hover > a:first-child:nth-last-child(2):after {border-right-color:rgba(0, 0, 0, 0.60);}
-
-/* FontAwesome arrow colors */
+/* Font icon arrow colors */
 .nav > ul > li > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.30);}
 .nav > ul > li:hover > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.60);}
 .nav ul li li > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.30);}
