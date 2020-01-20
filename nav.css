@@ -1,21 +1,45 @@
 /*
-Pure CSS Navigation v1.3
+Pure CSS Navigation v1.4
 by Adam Culpepper | @adamculpepper
 https://github.com/adamculpepper/pure-css-navigation
 */
 
+/* Customizable styles */
+.nav ul li a			{color:#555;}
+
+.nav > ul > li			{margin-right:1px;}
+
+/* Level 1 */
+.nav ul li				{background:rgba(0, 0, 0, 0.05);}
+.nav ul li a			{font-size:1rem; line-height:50px; padding:0 20px;}
+
+/* Level 2 and beyond */
+.nav ul ul				{background:#d9d9d9;}
+.nav ul ul li a			{font-size:0.8rem; line-height:35px;}
+
+/* Hover colors */
+.nav ul li a:hover,
+.nav ul li li:hover > a:first-child:nth-last-child(2),
+.nav > ul > li:hover > a:first-child:nth-last-child(2) {background:#ddd;}
+
+/* Font icon arrow colors */
+.nav > ul > li > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.30);}
+.nav > ul > li:hover > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.60);}
+.nav ul li li > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.30);}
+.nav ul li li:hover > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.60);}
+
 /* //////////////////////////
-CUSTOMIZABLE STYLES AT BOTTOM
+CORE STYLES BELOW - NO TOUCHY
 ////////////////////////// */
 
-/* CORE STYLES - NO TOUCHY */
 .nav ul,
 .nav li					{margin:0; padding:0; list-style:none;}
 .nav a					{text-decoration:none; transition:all 300ms;}
 
 /* Level 1 */
 .nav ul					{display:flex; flex-wrap:wrap;}
-.nav ul li				{white-space:nowrap; text-align:left;}
+.nav ul li				{overflow:hidden; white-space:nowrap; text-align:left;}
+.nav ul li:hover		{overflow:visible;}
 .nav ul > li			{position:relative;}
 .nav ul li a			{display:block;}
 
@@ -26,21 +50,6 @@ CUSTOMIZABLE STYLES AT BOTTOM
 /* Level 3 */
 .nav ul ul ul			{top:0; left:100%;}
 .nav ul ul ul			{margin-top:5px;}
-/* CORE STYLES - NO TOUCHY */
-
-/* ---------- */
-
-/* Justify Navigation (first level equal widths) */
-.nav.nav-justified > ul {width:100%;}
-.nav.nav-justified > ul > li {flex: 1 1 auto;}
-.nav.nav-justified > ul > li > a {justify-content:center; padding:0;}
-
-/* ---------- */
-
-/* Vertical Navigation */
-.nav.nav-vertical ul {display:block; width:200px;}
-.nav.nav-vertical > ul > li {}
-.nav.nav-vertical > ul > li > a {}
 
 /* ---------- */
 
@@ -78,26 +87,14 @@ CUSTOMIZABLE STYLES AT BOTTOM
 
 /* ---------- */
 
-/* Customizable styles */
-.nav ul li a			{color:#555;}
+/* Justify Navigation (first level equal widths) */
+.nav.nav-justified > ul {width:100%;}
+.nav.nav-justified > ul > li {flex:1 1 auto;}
+.nav.nav-justified > ul > li > a {justify-content:center; padding:0;}
 
-.nav > ul > li			{margin-right:1px;}
+/* ---------- */
 
-/* Level 1 */
-.nav ul li				{background:rgba(0, 0, 0, 0.05);}
-.nav ul li a			{font-size:1rem; line-height:50px; padding:0 20px;}
-
-/* Level 2 and beyond */
-.nav ul ul				{background:#d9d9d9;}
-.nav ul ul li a			{font-size:0.8rem; line-height:35px;}
-
-/* Hover colors */
-.nav ul li a:hover,
-.nav ul li li:hover > a:first-child:nth-last-child(2),
-.nav > ul > li:hover > a:first-child:nth-last-child(2) {background:#ddd;}
-
-/* Font icon arrow colors */
-.nav > ul > li > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.30);}
-.nav > ul > li:hover > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.60);}
-.nav ul li li > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.30);}
-.nav ul li li:hover > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.60);}
+/* Vertical Navigation */
+.nav.nav-vertical ul {display:block; width:200px;}
+.nav.nav-vertical > ul > li {}
+.nav.nav-vertical > ul > li > a {}
