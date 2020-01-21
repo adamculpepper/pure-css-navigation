@@ -1,5 +1,5 @@
 /*
-Pure CSS Navigation v1.5
+Pure CSS Navigation v1.6
 by Adam Culpepper | @adamculpepper
 https://github.com/adamculpepper/pure-css-navigation
 */
@@ -10,23 +10,26 @@ https://github.com/adamculpepper/pure-css-navigation
 .nav > ul > li			{margin-right:1px;}
 
 /* Level 1 */
-.nav ul li				{background:rgba(0, 0, 0, 0.05);}
+.nav ul li				{background-color:rgba(0, 0, 0, 0.05);}
 .nav ul li a			{font-size:1rem; line-height:50px; padding:0 20px;}
 
 /* Level 2 and beyond */
-.nav ul ul				{background:#d9d9d9;}
+.nav ul ul				{background-color:#d9d9d9;}
 .nav ul ul li a			{font-size:0.8rem; line-height:35px;}
 
 /* Hover colors */
 .nav ul li a:hover,
 .nav ul li li:hover > a:first-child:nth-last-child(2),
-.nav > ul > li:hover > a:first-child:nth-last-child(2) {background:#ddd;}
+.nav > ul > li:hover > a:first-child:nth-last-child(2) {background-color:#ddd;}
 
 /* Font icon arrow colors */
 .nav > ul > li > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.30);}
 .nav > ul > li:hover > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.60);}
 .nav ul li li > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.30);}
 .nav ul li li:hover > a:first-child:nth-last-child(2):after {color:rgba(0, 0, 0, 0.60);}
+
+/* Mobile Navigation overlay */
+.nav.mobile-nav input:checked + label + nav {background-color:rgba(255, 255, 255, 0.9);}
 
 /* //////////////////////////
 CORE STYLES BELOW - NO TOUCHY
@@ -98,3 +101,85 @@ CORE STYLES BELOW - NO TOUCHY
 .nav.nav-vertical > ul {display:block; width:200px;}
 .nav.nav-vertical > ul li a:first-child:nth-last-child(2):after {margin-left:auto;}
 .nav.nav-vertical > ul ul {left:100%; top:0; margin-top:5px;}
+.nav.nav-vertical > ul > li	{margin-bottom:1px;}
+
+/* ---------- */
+
+/* Mobile Navigation */
+.nav.mobile-nav {transition:all 0.5s;}
+.nav.mobile-nav input {display:none;}
+.nav.mobile-nav input + label {margin-bottom:0;}
+.nav.mobile-nav input + label + nav > ul > li {margin-right:1px;}
+.nav.mobile-nav input:checked + label {z-index:999;}
+.nav.mobile-nav input:checked + label i:before {content:'\f00d';}
+.nav.mobile-nav input:checked + label + nav {
+	margin:0 -100%;
+	margin:0 calc(50% - 50vw);
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:99;
+	width:100%;
+	height:100%;
+}
+
+/* Mobile Navigation > Animations */
+.nav.mobile-nav input:checked + label + nav		{animation:mobile-nav-slide-out 0.5s;}
+.nav.mobile-nav input:checked + label i:before	{animation:fade-in-icon-close 1s;}
+
+@keyframes fade-in-icon-close {
+	0%		{opacity:0;}
+	100%	{opacity:1;}
+}
+
+@keyframes mobile-nav-slide-out {
+	0%		{left:-100%;}
+	100%	{left:0;}
+}
+
+
+/* Mobile Navigation > Vertical Navigation */
+.nav.mobile-nav input:checked + label + nav > ul {display:block; width:200px; height:100%;}
+.nav.mobile-nav input:checked + label + nav > ul li a:first-child:nth-last-child(2):after {margin-left:auto;}
+.nav.mobile-nav input:checked + label + nav > ul ul {left:100%; top:0; margin-top:5px;}
+.nav.mobile-nav input:checked + label + nav > ul > li {margin-bottom:1px;}
+
+/* ---------- */
+
+/* Responsive Breakpoints - down */
+
+/* Extra Small (xs) and down */
+@media (max-width:575px) {}
+
+/* Small (sm) and down */
+@media (max-width:767px) {}
+
+/* Medium (md) and down */
+@media (max-width:991px) {
+	.nav.mobile-nav nav {display:none;}
+	.nav.mobile-nav input:checked + label + nav {display:block;}
+}
+
+/* Large (lg) and down */
+@media (max-width:1199px) {}
+
+/* ---------- */
+
+/* Responsive Breakpoints - up */
+
+/* Small (sm) and up */
+@media (min-width:576px) {}
+
+/* Medium (md) and up */
+@media (min-width:768px) {}
+
+/* Large (lg) and up */
+@media (min-width:992px) {
+	.nav.mobile-nav input:not(:checked),
+	.nav.mobile-nav input:not(:checked) + label {display:none;}
+}
+
+/* Extra Large (xl) and up */
+@media (min-width:1200px) {}
