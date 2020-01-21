@@ -96,5 +96,4 @@ CORE STYLES BELOW - NO TOUCHY
 
 /* Vertical Navigation */
 .nav.nav-vertical ul {display:block; width:200px;}
-.nav.nav-vertical > ul > li {}
-.nav.nav-vertical > ul > li > a {}
+.nav.nav-vertical ul ul {left:100%; top:0; margin-top:5px;}
