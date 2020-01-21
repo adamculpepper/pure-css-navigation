@@ -1,5 +1,5 @@
 /*
-Pure CSS Navigation v1.4
+Pure CSS Navigation v1.5
 by Adam Culpepper | @adamculpepper
 https://github.com/adamculpepper/pure-css-navigation
 */
@@ -95,5 +95,6 @@ CORE STYLES BELOW - NO TOUCHY
 /* ---------- */
 
 /* Vertical Navigation */
-.nav.nav-vertical ul {display:block; width:200px;}
-.nav.nav-vertical ul ul {left:100%; top:0; margin-top:5px;}
+.nav.nav-vertical > ul {display:block; width:200px;}
+.nav.nav-vertical > ul li a:first-child:nth-last-child(2):after {margin-left:auto;}
+.nav.nav-vertical > ul ul {left:100%; top:0; margin-top:5px;}
