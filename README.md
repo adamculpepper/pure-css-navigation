@@ -2,11 +2,10 @@
 No dependency, CSS only navigation system
 
 ## Features
-* CSS only
+* CSS only - no JavaScript!
 * No dependencies
-* Equal widths (justified) for the first level navs
-* Shows dropdown arrow if the parent nav has children
-* FontAwesome support
-
-## TODO
-* Finish vertical navigation support
+* Justified (equal widths) for the first nav level
+* Dropdown arrows for nav parents with children
+* Horizontal and vertical navigation support
+* Mobile navigation using the same nav structure
+* Font icon support
