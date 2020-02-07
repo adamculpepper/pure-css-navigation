@@ -1,5 +1,5 @@
 /*
-Pure CSS Navigation v1.6
+Pure CSS Navigation v1.7
 by Adam Culpepper | @adamculpepper
 https://github.com/adamculpepper/pure-css-navigation
 */
@@ -18,7 +18,7 @@ https://github.com/adamculpepper/pure-css-navigation
 .nav ul ul li a			{font-size:0.8rem; line-height:35px;}
 
 /* Hover colors */
-.nav ul li a:hover,
+.nav ul li:hover,
 .nav ul li li:hover > a:first-child:nth-last-child(2),
 .nav > ul > li:hover > a:first-child:nth-last-child(2) {background-color:#ddd;}
 
@@ -37,6 +37,7 @@ CORE STYLES BELOW - NO TOUCHY
 
 .nav ul,
 .nav li					{margin:0; padding:0; list-style:none;}
+.nav li:hover			{cursor:pointer;}
 .nav a					{text-decoration:none; transition:all 300ms;}
 
 /* Level 1 */
