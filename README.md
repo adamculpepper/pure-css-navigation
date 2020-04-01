@@ -1,5 +1,5 @@
-# Pure CSS Navigation
-No dependency, CSS only navigation system
+# [Pure CSS Navigation](https://adamculpepper.github.io/pure-css-navigation)
+A pure CSS navigation system
 
 ## Features
 * CSS only - no JavaScript!
