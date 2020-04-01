@@ -4,465 +4,450 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title></title>
-		<meta name="author" content="">
-		<meta name="description" content="">
-		<!-- <link href="favicon.ico" rel="shortcut icon"> -->
-		<!-- <link href="favicon.png" rel="apple-touch-icon-precomposed"> -->
+		<title>Pure CSS Navigation - A pure CSS navigation system</title>
+		<meta name="author" content="Pure CSS Navigation">
+		<meta name="description" content="A pure CSS navigation system">
+		<!-- <link href="/favicon.ico" rel="shortcut icon"> -->
+		<!-- <link href="/favicon.png" rel="apple-touch-icon-precomposed"> -->
 
 		<!-- styles -->
-		<!-- <link rel="stylesheet" href="./assets/css/bootstrap.min.css"> -->
-		<!-- <link rel="stylesheet" href="./assets/css/fontawesome.min.css">	 -->	
-		<!-- <link rel="stylesheet" href="https://test.mycircleworks.com/assets/css/styles.css"> -->
-		<!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.0.12/dist/css/select2.min.css" rel="stylesheet" /> -->
-
-		<!-- <link rel="stylesheet" href="./assets/css/float-labels.css"> -->
-		<link rel="stylesheet" href="../nav.css">
-		<link rel="stylesheet" href="./assets/css/custom.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.12.1/css/all.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adamculpepper/pure-css-navigation@latest/pure-css-navigation.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/adamculpepper/pure-css-navigation@latest/docs/assets/css/custom.css">
 	</head>
 	<body>
-
 		<header>
-			<div class="logo">
-				<!-- <img src="./assets/img/logo.png" alt=""> -->
-				<h1>Logo</h1>
-			</div>
-
-			<div class="nav mobile-nav">
-
-				<input id="mobile-nav1" type="checkbox">
-				<label for="mobile-nav1">
-					<i class="fas fa-2x fa-bars"></i>
-				</label>
-
-				<nav>
-					<ul>
-						<li><a href="">Home</a></li>
-						<li>
-							<a href="">About Us</a>
-							<ul>
-								<li><a href="">Sub #1</a></li>
-								<li>
-									<a href="">Sub #2</a>
-									<ul>
-										<li><a href="">Sub #2.1</a></li>
-										<li>
-											<a href="">Sub #2.2</a>
-											<ul>
-												<li><a href="">Sub #3.1</a></li>
-												<li><a href="">Sub #3.2</a></li>
-												<li><a href="">Sub #3.3</a></li>
-											</ul>
-										</li>
-										<li><a href="">Sub #2.3</a></li>
-									</ul>
-								</li>
-								<li><a href="">Sub #3</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="">Portfolio</a>
-							<ul>
-								<li><a href="">No Children</a></li>
-								<li>
-									<a href="">1 Child - dlfjkhs adljkfh slakdj dg gsdf gdf gsd gd gd</a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="">2 Children</a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-										<li><a href="">Child #2</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="">3 Children</a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-										<li><a href="">Child #2</a></li>
-										<li>
-											<a href="">Child #3</a>
-											<ul>
-												<li><a href="">Child #1</a></li>
-												<li><a href="">Child #2</a></li>
-												<li>
-													<a href="">Child #3</a>
-													<ul>
-														<li><a href="">Child #1</a></li>
-														<li><a href="">Child #2</a></li>
-														<li>
-															<a href="">Child #3</a>
-															<ul>
-																<li><a href="">Child #1</a></li>
-																<li><a href="">Child #2</a></li>
-																<li><a href="">Child #3</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="http://services.dfdfsasdasd.com">Services</a></li>
-						<li><a href="http://events.bjhbgvecferfxw.com">Events</a></li>
-						<li><a href="http://blog.sadgfkasdgfkjsdh.com">Blog</a></li>
-						<li><a href="http://careers.dfsdfgdfgdfgdfdggf.com">Careers</a></li>
-					</ul>
-				</nav>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 py-3">
+						<div class="row">
+							<div class="col-lg-9">
+								<h1>Pure CSS Navigation<span class="h5 ml-2">v1.8</span></h1>
+								<h2 class="h4">A pure CSS navigation system</h2>
+							</div>
+							<div class="col-lg-3 d-block d-lg-flex align-items-center mt-4 mt-lg-0">
+								<div class="d-inline-block text-center ml-auto">
+									<a class="btn btn-primary ml-auto d-block" href="https://github.com/adamculpepper/pure-css-navigation">Edit on Github</a>
+									Docs in README
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</header>
 
-
-		<div class="container">
-
+		<div id="content" class="container mt-4">
 			<div class="container mt-5">
 				<h3 class="mb-0">Default</h3>
-				<div class="nav mb-5">
-					<ul>
-						<li><a href="">Home</a></li>
-						<li>
-							<a href="">About Us</a>
-							<ul>
-								<li><a href="">Sub #1</a></li>
-								<li>
-									<a href="">Sub #2</a>
-									<ul>
-										<li><a href="">Sub #2.1</a></li>
-										<li>
-											<a href="">Sub #2.2</a>
-											<ul>
-												<li><a href="">Sub #3.1</a></li>
-												<li><a href="">Sub #3.2</a></li>
-												<li><a href="">Sub #3.3</a></li>
-											</ul>
-										</li>
-										<li><a href="">Sub #2.3</a></li>
-									</ul>
-								</li>
-								<li><a href="">Sub #3</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="">Portfolio</a>
-							<ul>
-								<li><a href="">No Children</a></li>
-								<li>
-									<a href="">1 Child - dlfjkhs adljkfh slakdj </a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="">2 Children</a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-										<li><a href="">Child #2</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="">3 Children</a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-										<li><a href="">Child #2</a></li>
-										<li>
-											<a href="">Child #3</a>
-											<ul>
-												<li><a href="">Child #1</a></li>
-												<li><a href="">Child #2</a></li>
-												<li>
-													<a href="">Child #3</a>
-													<ul>
-														<li><a href="">Child #1</a></li>
-														<li><a href="">Child #2</a></li>
-														<li>
-															<a href="">Child #3</a>
-															<ul>
-																<li><a href="">Child #1</a></li>
-																<li><a href="">Child #2</a></li>
-																<li><a href="">Child #3</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="">Services</a></li>
-						<li><a href="">Events</a></li>
-						<li><a href="">Blog</a></li>
-						<li><a href="">Careers</a></li>
-						<li><a href="">Contact Us</a></li>
-					</ul>
+				<div class="pure-css-nav mb-5">
+					<nav>
+						<ul>
+							<li><a href="">Home</a></li>
+							<li>
+								<a href="">About Us</a>
+								<ul>
+									<li><a href="">Sub #1</a></li>
+									<li>
+										<a href="">Sub #2</a>
+										<ul>
+											<li><a href="">Sub #2.1</a></li>
+											<li>
+												<a href="">Sub #2.2</a>
+												<ul>
+													<li><a href="">Sub #3.1</a></li>
+													<li><a href="">Sub #3.2</a></li>
+													<li><a href="">Sub #3.3</a></li>
+												</ul>
+											</li>
+											<li><a href="">Sub #2.3</a></li>
+										</ul>
+									</li>
+									<li><a href="">Sub #3</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">Portfolio</a>
+								<ul>
+									<li><a href="">No Children</a></li>
+									<li>
+										<a href="">1 Child - dlfjkhs adljkfh slakdj </a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">2 Children</a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+											<li><a href="">Child #2</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">3 Children</a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+											<li><a href="">Child #2</a></li>
+											<li>
+												<a href="">Child #3</a>
+												<ul>
+													<li><a href="">Child #1</a></li>
+													<li><a href="">Child #2</a></li>
+													<li>
+														<a href="">Child #3</a>
+														<ul>
+															<li><a href="">Child #1</a></li>
+															<li><a href="">Child #2</a></li>
+															<li>
+																<a href="">Child #3</a>
+																<ul>
+																	<li><a href="">Child #1</a></li>
+																	<li><a href="">Child #2</a></li>
+																	<li><a href="">Child #3</a></li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="">Services</a></li>
+							<li><a href="">Events</a></li>
+							<li><a href="">Blog</a></li>
+							<li><a href="">Careers</a></li>
+							<li><a href="">Contact Us</a></li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 
 			<div class="container">
 				<h3 class="mb-0">Font Icons</h3>
-				<div class="nav nav-font-icons mb-5">
-					<ul>
-						<li><a href="">Home</a></li>
-						<li>
-							<a href="">About Us</a>
-							<ul>
-								<li><a href="">Sub #1</a></li>
-								<li>
-									<a href="">Sub #2</a>
-									<ul>
-										<li><a href="">Sub #2.1</a></li>
-										<li>
-											<a href="">Sub #2.2</a>
-											<ul>
-												<li><a href="">Sub #3.1</a></li>
-												<li><a href="">Sub #3.2</a></li>
-												<li><a href="">Sub #3.3</a></li>
-											</ul>
-										</li>
-										<li><a href="">Sub #2.3</a></li>
-									</ul>
-								</li>
-								<li><a href="">Sub #3</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="">Portfolio</a>
-							<ul>
-								<li><a href="">No Children</a></li>
-								<li>
-									<a href="">1 Child - dlfjkhs adljkfh slakdj </a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="">2 Children</a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-										<li><a href="">Child #2</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="">3 Children</a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-										<li><a href="">Child #2</a></li>
-										<li>
-											<a href="">Child #3</a>
-											<ul>
-												<li><a href="">Child #1</a></li>
-												<li><a href="">Child #2</a></li>
-												<li>
-													<a href="">Child #3</a>
-													<ul>
-														<li><a href="">Child #1</a></li>
-														<li><a href="">Child #2</a></li>
-														<li>
-															<a href="">Child #3</a>
-															<ul>
-																<li><a href="">Child #1</a></li>
-																<li><a href="">Child #2</a></li>
-																<li><a href="">Child #3</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="">Services</a></li>
-						<li><a href="">Events</a></li>
-						<li><a href="">Blog</a></li>
-						<li><a href="">Careers</a></li>
-						<li><a href="">Contact Us</a></li>
-					</ul>
+				<div class="pure-css-nav nav-font-icons mb-5">
+					<nav>
+						<ul>
+							<li><a href="">Home</a></li>
+							<li>
+								<a href="">About Us</a>
+								<ul>
+									<li><a href="">Sub #1</a></li>
+									<li>
+										<a href="">Sub #2</a>
+										<ul>
+											<li><a href="">Sub #2.1</a></li>
+											<li>
+												<a href="">Sub #2.2</a>
+												<ul>
+													<li><a href="">Sub #3.1</a></li>
+													<li><a href="">Sub #3.2</a></li>
+													<li><a href="">Sub #3.3</a></li>
+												</ul>
+											</li>
+											<li><a href="">Sub #2.3</a></li>
+										</ul>
+									</li>
+									<li><a href="">Sub #3</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">Portfolio</a>
+								<ul>
+									<li><a href="">No Children</a></li>
+									<li>
+										<a href="">1 Child - dlfjkhs adljkfh slakdj </a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">2 Children</a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+											<li><a href="">Child #2</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">3 Children</a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+											<li><a href="">Child #2</a></li>
+											<li>
+												<a href="">Child #3</a>
+												<ul>
+													<li><a href="">Child #1</a></li>
+													<li><a href="">Child #2</a></li>
+													<li>
+														<a href="">Child #3</a>
+														<ul>
+															<li><a href="">Child #1</a></li>
+															<li><a href="">Child #2</a></li>
+															<li>
+																<a href="">Child #3</a>
+																<ul>
+																	<li><a href="">Child #1</a></li>
+																	<li><a href="">Child #2</a></li>
+																	<li><a href="">Child #3</a></li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="">Services</a></li>
+							<li><a href="">Events</a></li>
+							<li><a href="">Blog</a></li>
+							<li><a href="">Careers</a></li>
+							<li><a href="">Contact Us</a></li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 
 			<div class="container">
 				<h3 class="mb-0">Justified</h3>
-				<div class="nav nav-justified mb-5">
-					<ul>
-						<li><a href="">Home</a></li>
-						<li>
-							<a href="">About Us</a>
-							<ul>
-								<li><a href="">Sub #1</a></li>
-								<li>
-									<a href="">Sub #2</a>
-									<ul>
-										<li><a href="">Sub #2.1</a></li>
-										<li>
-											<a href="">Sub #2.2</a>
-											<ul>
-												<li><a href="">Sub #3.1</a></li>
-												<li><a href="">Sub #3.2</a></li>
-												<li><a href="">Sub #3.3</a></li>
-											</ul>
-										</li>
-										<li><a href="">Sub #2.3</a></li>
-									</ul>
-								</li>
-								<li><a href="">Sub #3</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="">Portfolio</a>
-							<ul>
-								<li><a href="">No Children</a></li>
-								<li>
-									<a href="">1 Child - dlfjkhs adljkfh slakdj </a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="">2 Children</a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-										<li><a href="">Child #2</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="">3 Children</a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-										<li><a href="">Child #2</a></li>
-										<li>
-											<a href="">Child #3</a>
-											<ul>
-												<li><a href="">Child #1</a></li>
-												<li><a href="">Child #2</a></li>
-												<li>
-													<a href="">Child #3</a>
-													<ul>
-														<li><a href="">Child #1</a></li>
-														<li><a href="">Child #2</a></li>
-														<li>
-															<a href="">Child #3</a>
-															<ul>
-																<li><a href="">Child #1</a></li>
-																<li><a href="">Child #2</a></li>
-																<li><a href="">Child #3</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="">Services</a></li>
-						<li><a href="">Events</a></li>
-						<li><a href="">Blog</a></li>
-						<li><a href="">Careers</a></li>
-						<li><a href="">Contact Us</a></li>
-					</ul>
+				<div class="pure-css-nav nav-justified mb-5">
+					<nav>
+						<ul>
+							<li><a href="">Home</a></li>
+							<li>
+								<a href="">About Us</a>
+								<ul>
+									<li><a href="">Sub #1</a></li>
+									<li>
+										<a href="">Sub #2</a>
+										<ul>
+											<li><a href="">Sub #2.1</a></li>
+											<li>
+												<a href="">Sub #2.2</a>
+												<ul>
+													<li><a href="">Sub #3.1</a></li>
+													<li><a href="">Sub #3.2</a></li>
+													<li><a href="">Sub #3.3</a></li>
+												</ul>
+											</li>
+											<li><a href="">Sub #2.3</a></li>
+										</ul>
+									</li>
+									<li><a href="">Sub #3</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">Portfolio</a>
+								<ul>
+									<li><a href="">No Children</a></li>
+									<li>
+										<a href="">1 Child - dlfjkhs adljkfh slakdj </a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">2 Children</a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+											<li><a href="">Child #2</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">3 Children</a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+											<li><a href="">Child #2</a></li>
+											<li>
+												<a href="">Child #3</a>
+												<ul>
+													<li><a href="">Child #1</a></li>
+													<li><a href="">Child #2</a></li>
+													<li>
+														<a href="">Child #3</a>
+														<ul>
+															<li><a href="">Child #1</a></li>
+															<li><a href="">Child #2</a></li>
+															<li>
+																<a href="">Child #3</a>
+																<ul>
+																	<li><a href="">Child #1</a></li>
+																	<li><a href="">Child #2</a></li>
+																	<li><a href="">Child #3</a></li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="">Services</a></li>
+							<li><a href="">Events</a></li>
+							<li><a href="">Blog</a></li>
+							<li><a href="">Careers</a></li>
+							<li>
+								<a href="">Contact<br>Us</a>
+								<ul>
+									<li><a href="">No Children</a></li>
+									<li>
+										<a href="">1 Child - dlfjkhs adljkfh slakdj </a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">2 Children</a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+											<li><a href="">Child #2</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">3 Children</a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+											<li><a href="">Child #2</a></li>
+											<li>
+												<a href="">Child #3</a>
+												<ul>
+													<li><a href="">Child #1</a></li>
+													<li><a href="">Child #2</a></li>
+													<li>
+														<a href="">Child #3</a>
+														<ul>
+															<li><a href="">Child #1</a></li>
+															<li><a href="">Child #2</a></li>
+															<li>
+																<a href="">Child #3</a>
+																<ul>
+																	<li><a href="">Child #1</a></li>
+																	<li><a href="">Child #2</a></li>
+																	<li><a href="">Child #3</a></li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="">Blog</a></li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 
 			<div class="container">
 				<h3 class="mb-0">Vertical</h3>
-				<div class="nav nav-vertical mb-5">
-					<ul>
-						<li><a href="">Home</a></li>
-						<li>
-							<a href="">About Us</a>
-							<ul>
-								<li><a href="">Sub #1</a></li>
-								<li>
-									<a href="">Sub #2</a>
-									<ul>
-										<li><a href="">Sub #2.1</a></li>
-										<li>
-											<a href="">Sub #2.2</a>
-											<ul>
-												<li><a href="">Sub #3.1</a></li>
-												<li><a href="">Sub #3.2</a></li>
-												<li><a href="">Sub #3.3</a></li>
-											</ul>
-										</li>
-										<li><a href="">Sub #2.3</a></li>
-									</ul>
-								</li>
-								<li><a href="">Sub #3</a></li>
-							</ul>
-						</li>
-						<li>
-							<a href="">Portfolio</a>
-							<ul>
-								<li><a href="">No Children</a></li>
-								<li>
-									<a href="">1 Child - dlfjkhs adljkfh slakdj </a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="">2 Children</a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-										<li><a href="">Child #2</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="">3 Children</a>
-									<ul>
-										<li><a href="">Child #1</a></li>
-										<li><a href="">Child #2</a></li>
-										<li>
-											<a href="">Child #3</a>
-											<ul>
-												<li><a href="">Child #1</a></li>
-												<li><a href="">Child #2</a></li>
-												<li>
-													<a href="">Child #3</a>
-													<ul>
-														<li><a href="">Child #1</a></li>
-														<li><a href="">Child #2</a></li>
-														<li>
-															<a href="">Child #3</a>
-															<ul>
-																<li><a href="">Child #1</a></li>
-																<li><a href="">Child #2</a></li>
-																<li><a href="">Child #3</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-											</ul>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="">Services</a></li>
-						<li><a href="">Events</a></li>
-						<li><a href="">Blog</a></li>
-						<li><a href="">Careers</a></li>
-						<li><a href="">Contact Us</a></li>
-					</ul>
+				<div class="pure-css-nav nav-vertical mb-5">
+					<nav>
+						<ul>
+							<li><a href="">Home</a></li>
+							<li>
+								<a href="">About Us</a>
+								<ul>
+									<li><a href="">Sub #1</a></li>
+									<li>
+										<a href="">Sub #2</a>
+										<ul>
+											<li><a href="">Sub #2.1</a></li>
+											<li>
+												<a href="">Sub #2.2</a>
+												<ul>
+													<li><a href="">Sub #3.1</a></li>
+													<li><a href="">Sub #3.2</a></li>
+													<li><a href="">Sub #3.3</a></li>
+												</ul>
+											</li>
+											<li><a href="">Sub #2.3</a></li>
+										</ul>
+									</li>
+									<li><a href="">Sub #3</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="">Portfolio</a>
+								<ul>
+									<li><a href="">No Children</a></li>
+									<li>
+										<a href="">1 Child - dlfjkhs adljkfh slakdj </a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">2 Children</a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+											<li><a href="">Child #2</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="">3 Children</a>
+										<ul>
+											<li><a href="">Child #1</a></li>
+											<li><a href="">Child #2</a></li>
+											<li>
+												<a href="">Child #3</a>
+												<ul>
+													<li><a href="">Child #1</a></li>
+													<li><a href="">Child #2</a></li>
+													<li>
+														<a href="">Child #3</a>
+														<ul>
+															<li><a href="">Child #1</a></li>
+															<li><a href="">Child #2</a></li>
+															<li>
+																<a href="">Child #3</a>
+																<ul>
+																	<li><a href="">Child #1</a></li>
+																	<li><a href="">Child #2</a></li>
+																	<li><a href="">Child #3</a></li>
+																</ul>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="">Services</a></li>
+							<li><a href="">Events</a></li>
+							<li><a href="">Blog</a></li>
+							<li><a href="">Careers</a></li>
+							<li><a href="">Contact Us</a></li>
+						</ul>
+					</nav>
 				</div>
 			</div>
-
 		</div>
 
-		<footer>footer</footer>
+		<footer>
+			<div class="d-lg-flex">
+				<div class="d-block d-md-inline-block mb-3 mb-md-0">
+					<a href="https://adamculpepper.github.io/pure-css-navigation">Pure CSS Navigation</a>
+				</div>
+				<span class="ml-2 hidden-sm-down">is</span>
+				<span class="ml-2"><i class="fas fa-code"></i><span class="sr-only">built</span></span>
+				<span class="ml-2">with</span>
+				<span class="ml-2"><i class="fas fa-heart"></i><span class="sr-only">love</span></span>
+				<span class="ml-2">by</span>
+				<a class="ml-1" target="_blank" rel="referrer nofollow" href="http://adamculpepper.net"><img class="rounded-circle" src="https://cdn.louisianagroups.com/assets/img/adam.jpg" alt="Contributor"></a>
+				<div class="d-block d-lg-inline-block mt-3 mt-lg-0 ml-auto">
+					<a target="_blank" href="https://github.com/adamculpepper/pure-css-navigation">edit this page<i class="fab fa-github ml-2"></i></a>
+				</div>
+			</div>
+		</footer>
 
-		<!-- <script src="./assets/js/jquery.min.js"></script> -->
-		<!-- <script src="./assets/js/bootstrap.min.js"></script> -->
-		<!-- <script src="./assets/js/select2.min.js"></script> -->
-		<!-- <script src="./assets/js/custom.js"></script> -->
 	</body>
 </html>
